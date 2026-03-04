@@ -19,15 +19,11 @@
       gap: 2rem;
       background-color: black;
       color: limegreen;
-      background: url("pigment.jpg"), rgba(0, 0, 0, 0.75);
-      background-blend-mode: multiply;
+      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("pigment.jpg"), black;
       background-position: right top;
       background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    .text-xxs {
-      font-size: xx-small;
+      background-attachment: fixed;
+      background-size: 67% auto;
     }
 
     a {
@@ -36,17 +32,43 @@
       text-decoration: none;
     }
 
+    a :hover {
+      color: lime;
+    }
+
+    .text-xxs {
+      font-size: xx-small;
+    }
+
     .menu a {
       padding: 0.25rem;
     }
 
     .menu a:hover {
-      background-color: limegreen;
+      background-color: lime;
       color: black;
     }
 
     .title :hover {
       text-shadow: 0.25rem 0 0;
+    }
+
+    @media only screen and (max-width: 600px) {
+      body {
+        background-size: 100% auto;
+      }
+
+      * {
+        font-size: 8px;
+      }
+
+      a {
+        font-size: 8px;
+      }
+
+      .text-xxs {
+        font-size: 4px;
+      }
     }
   </style>
 </head>
